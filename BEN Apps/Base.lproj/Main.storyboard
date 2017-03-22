@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Register Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginRegisterController" customModule="BEN_Apps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,449 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_maskot" translatesAutoresizingMaskIntoConstraints="NO" id="Bcf-Uu-PUh">
+                                <rect key="frame" x="121" y="77" width="134" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="134" id="WqW-mK-gpo"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo_pertamina" translatesAutoresizingMaskIntoConstraints="NO" id="pjG-GW-BeF">
+                                <rect key="frame" x="101" y="20" width="173" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="TOG-eS-C6F"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="PT. PERTAMINA PERSERO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6up-YG-SBx">
+                                <rect key="frame" x="96" y="504" width="183" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="YoY-ED-PDg"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Copyright 2014" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flq-Li-6j7">
+                                <rect key="frame" x="123" y="528" width="130" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="wG7-CA-hdq"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oey-Ys-GzQ" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                <rect key="frame" x="40" y="319" width="305" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hgH-AT-1yF"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="nextResponderField" destination="IDV-mf-NXV" id="yVy-rO-nc8"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDV-mf-NXV" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                <rect key="frame" x="40" y="357" width="305" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OyV-JQ-O3O"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="nextResponderField" destination="Lgh-3l-KDy" id="ICO-3N-F5a"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z65-Ah-TOc">
+                                <rect key="frame" x="201" y="395" width="143.5" height="30"/>
+                                <color key="backgroundColor" red="0.85098039215686272" green="0.14509803921568626" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NDN-eE-26O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hgM-9e-1Ar" kind="show" id="qme-jC-1jc"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="forgot password ?" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOx-50-yOx">
+                                <rect key="frame" x="95" y="444" width="186" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="vbD-Sa-F56"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lgh-3l-KDy">
+                                <rect key="frame" x="40" y="395" width="144" height="30"/>
+                                <color key="backgroundColor" red="0.062745098039215685" green="0.44705882352941173" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7On-Fg-BU8"/>
+                                </constraints>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85490196078431369" green="0.14509803921568626" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pjG-GW-BeF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="09g-SC-eMg"/>
+                            <constraint firstItem="IDV-mf-NXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6fS-tp-NEG"/>
+                            <constraint firstItem="IDV-mf-NXV" firstAttribute="leading" secondItem="Lgh-3l-KDy" secondAttribute="leading" id="A3Z-cx-7hu"/>
+                            <constraint firstItem="Z65-Ah-TOc" firstAttribute="trailing" secondItem="Oey-Ys-GzQ" secondAttribute="trailing" id="DDa-7F-hrK"/>
+                            <constraint firstItem="6up-YG-SBx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="80" id="EiL-5g-En4"/>
+                            <constraint firstItem="Oey-Ys-GzQ" firstAttribute="trailing" secondItem="Z65-Ah-TOc" secondAttribute="trailing" constant="10" id="IBA-ec-l7H"/>
+                            <constraint firstItem="6up-YG-SBx" firstAttribute="top" secondItem="EOx-50-yOx" secondAttribute="bottom" constant="21" id="JvA-R6-wW6"/>
+                            <constraint firstItem="6up-YG-SBx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KWi-cA-aEj"/>
+                            <constraint firstItem="Oey-Ys-GzQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RCy-g1-uV7"/>
+                            <constraint firstItem="Lgh-3l-KDy" firstAttribute="top" secondItem="IDV-mf-NXV" secondAttribute="bottom" constant="8" symbolic="YES" id="RhW-Sw-TdQ"/>
+                            <constraint firstItem="Oey-Ys-GzQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sys-mg-s14"/>
+                            <constraint firstItem="Lgh-3l-KDy" firstAttribute="baseline" secondItem="Z65-Ah-TOc" secondAttribute="baseline" id="Vt1-Aw-jt0"/>
+                            <constraint firstItem="IDV-mf-NXV" firstAttribute="trailing" secondItem="Z65-Ah-TOc" secondAttribute="trailing" constant="10" id="XgY-bm-dkY"/>
+                            <constraint firstItem="pjG-GW-BeF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YyS-J0-lal"/>
+                            <constraint firstItem="Lgh-3l-KDy" firstAttribute="width" secondItem="Z65-Ah-TOc" secondAttribute="width" id="bus-rZ-mQx"/>
+                            <constraint firstItem="Bcf-Uu-PUh" firstAttribute="top" secondItem="pjG-GW-BeF" secondAttribute="bottom" constant="8" symbolic="YES" id="c7c-S6-p0z"/>
+                            <constraint firstItem="Z65-Ah-TOc" firstAttribute="trailing" secondItem="IDV-mf-NXV" secondAttribute="trailing" id="cz9-NY-2sP"/>
+                            <constraint firstItem="Bcf-Uu-PUh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eJq-n3-fbU"/>
+                            <constraint firstItem="IDV-mf-NXV" firstAttribute="top" secondItem="Oey-Ys-GzQ" secondAttribute="bottom" constant="8" symbolic="YES" id="eUa-iS-304"/>
+                            <constraint firstItem="Z65-Ah-TOc" firstAttribute="leading" secondItem="Lgh-3l-KDy" secondAttribute="trailing" constant="8" id="fEU-AG-ZQc"/>
+                            <constraint firstItem="flq-Li-6j7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fXd-XI-ymu"/>
+                            <constraint firstItem="pjG-GW-BeF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hzD-bt-RPN"/>
+                            <constraint firstItem="Oey-Ys-GzQ" firstAttribute="leading" secondItem="Lgh-3l-KDy" secondAttribute="leading" id="jEJ-hx-gfA"/>
+                            <constraint firstItem="EOx-50-yOx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jR1-Gv-J4M"/>
+                            <constraint firstItem="Lgh-3l-KDy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="jxy-H7-Pf0"/>
+                            <constraint firstItem="Oey-Ys-GzQ" firstAttribute="top" secondItem="Bcf-Uu-PUh" secondAttribute="bottom" constant="40" id="jyd-dg-XwE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Z65-Ah-TOc" secondAttribute="trailing" constant="24" id="o1A-T6-BAW"/>
+                            <constraint firstItem="EOx-50-yOx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="79" id="oRF-iM-52g"/>
+                            <constraint firstItem="EOx-50-yOx" firstAttribute="top" secondItem="Lgh-3l-KDy" secondAttribute="bottom" constant="19" id="rLg-9A-qjB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="flq-Li-6j7" secondAttribute="bottom" constant="111" id="toT-0f-Aat"/>
+                            <constraint firstItem="flq-Li-6j7" firstAttribute="top" secondItem="6up-YG-SBx" secondAttribute="bottom" constant="-15" id="vgg-4J-aKP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="Lgh-3l-KDy" id="edf-g2-oGr"/>
+                        <outlet property="passwordTF" destination="IDV-mf-NXV" id="Nvm-dd-2Zj"/>
+                        <outlet property="signupBtn" destination="Z65-Ah-TOc" id="msF-3X-np0"/>
+                        <outlet property="usernameTF" destination="Oey-Ys-GzQ" id="tkI-X8-CbC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="8DS-q5-eA8">
+            <objects>
+                <viewController id="hgM-9e-1Ar" customClass="RegisterViewController" customModule="BEN_Apps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ST-5p-nKD"/>
+                        <viewControllerLayoutGuide type="bottom" id="SM7-pQ-rsk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nT8-bg-ci4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLu-av-CM0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Please fulfill the following fields" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEf-hp-ggG">
+                                        <rect key="frame" x="8" y="19" width="231" height="29"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="231" id="lrZ-gV-HgO"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7mX-bO-I13" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="56" width="213" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="2CF-7h-NYw"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="Wb3-OF-ZVh"/>
+                                            <outlet property="nextResponderField" destination="54m-Mh-KbJ" id="9zd-y9-zhM"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54m-Mh-KbJ" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="99" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="isX-S7-r80"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="OKC-GX-X8y"/>
+                                            <outlet property="nextResponderField" destination="fRx-Ym-Twc" id="r3k-GG-kHH"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fRx-Ym-Twc" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="142" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="CXt-Da-qmg"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="ysk-Ve-WEm"/>
+                                            <outlet property="nextResponderField" destination="1df-MN-VmX" id="Cbe-DZ-nzt"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1df-MN-VmX" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="185" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dDm-a3-B0G"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="Uoo-ze-IHP"/>
+                                            <outlet property="nextResponderField" destination="Da3-Hg-E0s" id="03o-FH-KnA"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Birthday" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Da3-Hg-E0s" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="228" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="4DQ-lx-s0e"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="0TQ-Z6-dHd"/>
+                                            <outlet property="nextResponderField" destination="tTU-dD-cbg" id="Bdv-Sg-hz9"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eK7-AN-Ua3" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="314" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="xKn-DZ-cEI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="aeE-iQ-26p"/>
+                                            <outlet property="nextResponderField" destination="HTm-2a-CCa" id="KLy-OY-H1X"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTm-2a-CCa" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="357" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="rFS-OV-a7j"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="xBn-Xn-uNM"/>
+                                            <outlet property="nextResponderField" destination="KzZ-m3-XlV" id="K3E-cT-M2M"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KzZ-m3-XlV" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="400" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="tMe-sY-oeD"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="p4V-7v-yIS"/>
+                                            <outlet property="nextResponderField" destination="LyC-0T-h16" id="y4r-8n-IM8"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nopek" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LyC-0T-h16" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="443" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="QVp-NM-Hd1"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="DMc-cT-s8t"/>
+                                            <outlet property="nextResponderField" destination="p4U-29-xhk" id="9eT-sZ-CT3"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p4U-29-xhk" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="486" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="BLD-MY-KQa"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="FOq-Tk-EpA"/>
+                                            <outlet property="nextResponderField" destination="9qF-IH-BH2" id="h3F-TH-YSW"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9qF-IH-BH2" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="529" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="6zN-Mp-VAy"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="ZuR-YC-kSu"/>
+                                            <outlet property="nextResponderField" destination="xCx-ma-cQZ" id="UBb-Q6-tJi"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCx-ma-cQZ">
+                                        <rect key="frame" x="16" y="572" width="342" height="47"/>
+                                        <color key="backgroundColor" red="0.062745098040000002" green="0.44705882349999998" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="vpG-xu-lLe"/>
+                                        </constraints>
+                                        <state key="normal" title="CREATE ACCOUNT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createAccount:" destination="hgM-9e-1Ar" eventType="touchUpInside" id="xjM-iQ-dRn"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="@pertamina.com" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feu-Xp-1UI">
+                                        <rect key="frame" x="237" y="56" width="121" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="121" id="Bv8-iP-mGA"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Gender" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTU-dD-cbg" customClass="TextField" customModule="BEN_Apps" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="271" width="342" height="35"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="ebM-pG-b5D"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgM-9e-1Ar" id="O7h-zm-nN0"/>
+                                            <outlet property="nextResponderField" destination="eK7-AN-Ua3" id="8ij-rL-gzV"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LyC-0T-h16" firstAttribute="trailing" secondItem="p4U-29-xhk" secondAttribute="trailing" id="1WT-h2-aGX"/>
+                                    <constraint firstItem="1df-MN-VmX" firstAttribute="trailing" secondItem="Da3-Hg-E0s" secondAttribute="trailing" id="3UE-nF-W5N"/>
+                                    <constraint firstItem="fRx-Ym-Twc" firstAttribute="leading" secondItem="1df-MN-VmX" secondAttribute="leading" id="5bx-9q-dWX"/>
+                                    <constraint firstItem="eK7-AN-Ua3" firstAttribute="trailing" secondItem="HTm-2a-CCa" secondAttribute="trailing" id="6fS-Ki-vLg"/>
+                                    <constraint firstItem="xCx-ma-cQZ" firstAttribute="top" secondItem="9qF-IH-BH2" secondAttribute="bottom" constant="8" symbolic="YES" id="6if-GI-cs5"/>
+                                    <constraint firstItem="HTm-2a-CCa" firstAttribute="top" secondItem="eK7-AN-Ua3" secondAttribute="bottom" constant="8" symbolic="YES" id="Aex-o7-l75"/>
+                                    <constraint firstItem="54m-Mh-KbJ" firstAttribute="top" secondItem="Feu-Xp-1UI" secondAttribute="bottom" constant="8" symbolic="YES" id="E1d-mv-LNX"/>
+                                    <constraint firstItem="p4U-29-xhk" firstAttribute="leading" secondItem="9qF-IH-BH2" secondAttribute="leading" id="Eod-Z4-EN3"/>
+                                    <constraint firstItem="7mX-bO-I13" firstAttribute="leading" secondItem="hLu-av-CM0" secondAttribute="leading" constant="16" id="H82-ny-vlX"/>
+                                    <constraint firstItem="Da3-Hg-E0s" firstAttribute="top" secondItem="1df-MN-VmX" secondAttribute="bottom" constant="8" symbolic="YES" id="ImU-Jb-Fch"/>
+                                    <constraint firstItem="54m-Mh-KbJ" firstAttribute="top" secondItem="7mX-bO-I13" secondAttribute="bottom" constant="8" symbolic="YES" id="K3c-Xv-VRs"/>
+                                    <constraint firstItem="HTm-2a-CCa" firstAttribute="leading" secondItem="KzZ-m3-XlV" secondAttribute="leading" id="KVM-4j-LME"/>
+                                    <constraint firstItem="7mX-bO-I13" firstAttribute="top" secondItem="Feu-Xp-1UI" secondAttribute="top" id="Mqs-we-URP"/>
+                                    <constraint firstItem="54m-Mh-KbJ" firstAttribute="centerX" secondItem="hLu-av-CM0" secondAttribute="centerX" id="PTp-9R-QmY"/>
+                                    <constraint firstItem="HTm-2a-CCa" firstAttribute="trailing" secondItem="KzZ-m3-XlV" secondAttribute="trailing" id="PfK-M8-TwL"/>
+                                    <constraint firstItem="Feu-Xp-1UI" firstAttribute="top" secondItem="hLu-av-CM0" secondAttribute="top" constant="56" id="QZp-qG-9Aj"/>
+                                    <constraint firstItem="eK7-AN-Ua3" firstAttribute="leading" secondItem="HTm-2a-CCa" secondAttribute="leading" id="RgZ-ci-6WO"/>
+                                    <constraint firstAttribute="bottom" secondItem="xCx-ma-cQZ" secondAttribute="bottom" constant="48" id="T06-WA-ccw"/>
+                                    <constraint firstItem="9qF-IH-BH2" firstAttribute="trailing" secondItem="xCx-ma-cQZ" secondAttribute="trailing" id="TpN-48-ElW"/>
+                                    <constraint firstItem="1df-MN-VmX" firstAttribute="leading" secondItem="Da3-Hg-E0s" secondAttribute="leading" id="U8b-be-fuP"/>
+                                    <constraint firstItem="tTU-dD-cbg" firstAttribute="leading" secondItem="eK7-AN-Ua3" secondAttribute="leading" id="VQL-ad-inT"/>
+                                    <constraint firstItem="LyC-0T-h16" firstAttribute="leading" secondItem="p4U-29-xhk" secondAttribute="leading" id="Wmd-DI-bSt"/>
+                                    <constraint firstItem="tTU-dD-cbg" firstAttribute="trailing" secondItem="eK7-AN-Ua3" secondAttribute="trailing" id="YBA-4W-VmS"/>
+                                    <constraint firstItem="7mX-bO-I13" firstAttribute="top" secondItem="UEf-hp-ggG" secondAttribute="bottom" constant="8" symbolic="YES" id="Yoy-EO-ijZ"/>
+                                    <constraint firstItem="9qF-IH-BH2" firstAttribute="top" secondItem="p4U-29-xhk" secondAttribute="bottom" constant="8" symbolic="YES" id="ZN7-0x-HyT"/>
+                                    <constraint firstItem="54m-Mh-KbJ" firstAttribute="trailing" secondItem="fRx-Ym-Twc" secondAttribute="trailing" id="ZgS-gC-h3d"/>
+                                    <constraint firstItem="9qF-IH-BH2" firstAttribute="leading" secondItem="xCx-ma-cQZ" secondAttribute="leading" id="bfJ-J0-78v"/>
+                                    <constraint firstItem="KzZ-m3-XlV" firstAttribute="trailing" secondItem="LyC-0T-h16" secondAttribute="trailing" id="cE4-5M-YIA"/>
+                                    <constraint firstItem="KzZ-m3-XlV" firstAttribute="top" secondItem="HTm-2a-CCa" secondAttribute="bottom" constant="8" symbolic="YES" id="eT2-PZ-pP0"/>
+                                    <constraint firstItem="tTU-dD-cbg" firstAttribute="top" secondItem="Da3-Hg-E0s" secondAttribute="bottom" constant="8" symbolic="YES" id="eiQ-Gq-fny"/>
+                                    <constraint firstItem="p4U-29-xhk" firstAttribute="top" secondItem="LyC-0T-h16" secondAttribute="bottom" constant="8" symbolic="YES" id="epV-Xn-I7y"/>
+                                    <constraint firstItem="54m-Mh-KbJ" firstAttribute="leading" secondItem="fRx-Ym-Twc" secondAttribute="leading" id="fNI-ze-lvr"/>
+                                    <constraint firstItem="fRx-Ym-Twc" firstAttribute="top" secondItem="54m-Mh-KbJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gEy-Ey-UXJ"/>
+                                    <constraint firstItem="1df-MN-VmX" firstAttribute="top" secondItem="fRx-Ym-Twc" secondAttribute="bottom" constant="8" symbolic="YES" id="hlF-Nd-5QB"/>
+                                    <constraint firstItem="Da3-Hg-E0s" firstAttribute="leading" secondItem="tTU-dD-cbg" secondAttribute="leading" id="jEg-4l-QcY"/>
+                                    <constraint firstItem="7mX-bO-I13" firstAttribute="leading" secondItem="54m-Mh-KbJ" secondAttribute="leading" id="k1v-0o-RaI"/>
+                                    <constraint firstItem="KzZ-m3-XlV" firstAttribute="leading" secondItem="LyC-0T-h16" secondAttribute="leading" id="mGj-kN-PZL"/>
+                                    <constraint firstItem="UEf-hp-ggG" firstAttribute="top" secondItem="hLu-av-CM0" secondAttribute="top" constant="19" id="nEp-nF-cN3"/>
+                                    <constraint firstItem="UEf-hp-ggG" firstAttribute="leading" secondItem="hLu-av-CM0" secondAttribute="leadingMargin" id="nMv-xx-gGc"/>
+                                    <constraint firstItem="Feu-Xp-1UI" firstAttribute="leading" secondItem="7mX-bO-I13" secondAttribute="trailing" constant="8" symbolic="YES" id="p9P-BN-cfB"/>
+                                    <constraint firstItem="p4U-29-xhk" firstAttribute="trailing" secondItem="9qF-IH-BH2" secondAttribute="trailing" id="u0P-Sd-87W"/>
+                                    <constraint firstItem="Da3-Hg-E0s" firstAttribute="trailing" secondItem="tTU-dD-cbg" secondAttribute="trailing" id="vkF-7a-VCM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Feu-Xp-1UI" secondAttribute="trailing" constant="17" id="yj9-aL-m4D"/>
+                                    <constraint firstItem="fRx-Ym-Twc" firstAttribute="trailing" secondItem="1df-MN-VmX" secondAttribute="trailing" id="ymT-JX-ecb"/>
+                                    <constraint firstItem="LyC-0T-h16" firstAttribute="top" secondItem="KzZ-m3-XlV" secondAttribute="bottom" constant="8" symbolic="YES" id="zFj-Ip-sSA"/>
+                                    <constraint firstItem="Feu-Xp-1UI" firstAttribute="trailing" secondItem="54m-Mh-KbJ" secondAttribute="trailing" id="zOj-IR-LtG"/>
+                                    <constraint firstItem="eK7-AN-Ua3" firstAttribute="top" secondItem="tTU-dD-cbg" secondAttribute="bottom" constant="8" symbolic="YES" id="zqI-kK-EQR"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="hgM-9e-1Ar" id="KPp-Az-cdG"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85305875539779663" green="0.14465987682342529" blue="0.11060336977243423" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hLu-av-CM0" firstAttribute="leading" secondItem="nT8-bg-ci4" secondAttribute="leading" id="6Gp-vi-aMv"/>
+                            <constraint firstItem="hLu-av-CM0" firstAttribute="top" secondItem="nT8-bg-ci4" secondAttribute="top" id="FWp-sd-43J"/>
+                            <constraint firstAttribute="trailing" secondItem="hLu-av-CM0" secondAttribute="trailing" id="Xb8-Ha-a5i"/>
+                            <constraint firstItem="hLu-av-CM0" firstAttribute="bottom" secondItem="SM7-pQ-rsk" secondAttribute="top" id="oKH-Ti-4WC"/>
+                            <constraint firstItem="hLu-av-CM0" firstAttribute="width" secondItem="nT8-bg-ci4" secondAttribute="width" id="tSC-R6-Ran"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthdayTF" destination="Da3-Hg-E0s" id="Xcg-bm-Sng"/>
+                        <outlet property="companyTF" destination="eK7-AN-Ua3" id="Kfg-gD-Q6a"/>
+                        <outlet property="confpasswordTF" destination="9qF-IH-BH2" id="65F-hG-1rk"/>
+                        <outlet property="departmentTF" destination="HTm-2a-CCa" id="8UX-6H-kbn"/>
+                        <outlet property="emailTF" destination="7mX-bO-I13" id="4WY-VT-CAu"/>
+                        <outlet property="genderTF" destination="tTU-dD-cbg" id="X6e-j8-NCW"/>
+                        <outlet property="nameTF" destination="fRx-Ym-Twc" id="dTA-9s-Czg"/>
+                        <outlet property="nopekTF" destination="LyC-0T-h16" id="0RQ-gJ-gwz"/>
+                        <outlet property="passwordTF" destination="p4U-29-xhk" id="1F1-g1-5tT"/>
+                        <outlet property="phoneTF" destination="1df-MN-VmX" id="m27-TT-HwL"/>
+                        <outlet property="scrollView" destination="hLu-av-CM0" id="Sj1-pb-EdK"/>
+                        <outlet property="titleTF" destination="KzZ-m3-XlV" id="j4J-DZ-owt"/>
+                        <outlet property="usernameTF" destination="54m-Mh-KbJ" id="1dW-uZ-HWI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3I-Z9-s8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="118"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_logo_pertamina" width="157" height="40"/>
+        <image name="ic_maskot" width="98" height="198"/>
+    </resources>
 </document>

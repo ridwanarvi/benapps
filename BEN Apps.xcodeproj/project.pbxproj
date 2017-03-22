@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A93942558AFF14E5F3730EC /* Pods_BEN_AppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFA2F938E883F55D14BBC95 /* Pods_BEN_AppsUITests.framework */; };
+		2A58E1B31E7FB11800BDD422 /* LoginRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */; };
+		2A58E1B61E7FC91700BDD422 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B51E7FC91700BDD422 /* TextField.swift */; };
+		2A58E1B81E7FE6C700BDD422 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */; };
 		2AAD04FF1E7BB6C7007FF4AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD04FE1E7BB6C7007FF4AB /* AppDelegate.swift */; };
 		2AAD05011E7BB6C7007FF4AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD05001E7BB6C7007FF4AB /* ViewController.swift */; };
 		2AAD05041E7BB6C7007FF4AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD05021E7BB6C7007FF4AB /* Main.storyboard */; };
@@ -14,6 +18,8 @@
 		2AAD05091E7BB6C7007FF4AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD05071E7BB6C7007FF4AB /* LaunchScreen.storyboard */; };
 		2AAD05141E7BB6C7007FF4AB /* BEN_AppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD05131E7BB6C7007FF4AB /* BEN_AppsTests.swift */; };
 		2AAD051F1E7BB6C7007FF4AB /* BEN_AppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD051E1E7BB6C7007FF4AB /* BEN_AppsUITests.swift */; };
+		45F849729440E1DB11017398 /* Pods_BEN_AppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C293CC49BE40C1393479D78 /* Pods_BEN_AppsTests.framework */; };
+		7414660B4B3BFF45A3B455AC /* Pods_BEN_Apps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9108D25A8DFDCF38DB1F7A2 /* Pods_BEN_Apps.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1DC252B192D04C6EA42326BC /* Pods-BEN AppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN AppsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEN AppsUITests/Pods-BEN AppsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegisterController.swift; sourceTree = "<group>"; };
+		2A58E1B51E7FC91700BDD422 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2AAD04FB1E7BB6C7007FF4AB /* BEN Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEN Apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAD04FE1E7BB6C7007FF4AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AAD05001E7BB6C7007FF4AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,14 @@
 		2AAD051A1E7BB6C7007FF4AB /* BEN AppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BEN AppsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAD051E1E7BB6C7007FF4AB /* BEN_AppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEN_AppsUITests.swift; sourceTree = "<group>"; };
 		2AAD05201E7BB6C7007FF4AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C293CC49BE40C1393479D78 /* Pods_BEN_AppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEN_AppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59026502C775064A998583B1 /* Pods-BEN Apps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN Apps.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEN Apps/Pods-BEN Apps.release.xcconfig"; sourceTree = "<group>"; };
+		666876B3BF5ACAAC43AF27FD /* Pods-BEN AppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN AppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEN AppsTests/Pods-BEN AppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		9BFAC8177FC7717790D4C49E /* Pods-BEN AppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN AppsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEN AppsTests/Pods-BEN AppsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ABF9B48D77C2D2DAD9943556 /* Pods-BEN Apps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN Apps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEN Apps/Pods-BEN Apps.debug.xcconfig"; sourceTree = "<group>"; };
+		B550B6E31705E5B72CB1D92D /* Pods-BEN AppsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN AppsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BEN AppsUITests/Pods-BEN AppsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9108D25A8DFDCF38DB1F7A2 /* Pods_BEN_Apps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEN_Apps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCFA2F938E883F55D14BBC95 /* Pods_BEN_AppsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEN_AppsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7414660B4B3BFF45A3B455AC /* Pods_BEN_Apps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45F849729440E1DB11017398 /* Pods_BEN_AppsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +88,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A93942558AFF14E5F3730EC /* Pods_BEN_AppsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A58E1B41E7FC8FE00BDD422 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				2A58E1B51E7FC91700BDD422 /* TextField.swift */,
+			);
+			name = CustomClass;
+			sourceTree = "<group>";
+		};
 		2AAD04F21E7BB6C7007FF4AB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +110,8 @@
 				2AAD05121E7BB6C7007FF4AB /* BEN AppsTests */,
 				2AAD051D1E7BB6C7007FF4AB /* BEN AppsUITests */,
 				2AAD04FC1E7BB6C7007FF4AB /* Products */,
+				4C11A2C4738DB6D75C86B61A /* Pods */,
+				3EDB494315D79B16F5210694 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +128,12 @@
 		2AAD04FD1E7BB6C7007FF4AB /* BEN Apps */ = {
 			isa = PBXGroup;
 			children = (
+				2A58E1B41E7FC8FE00BDD422 /* CustomClass */,
+				2AF1D6951E7BBF1E002F0F97 /* Main */,
+				2AF1D6941E7BBEFC002F0F97 /* LoginRegister */,
 				2AAD04FE1E7BB6C7007FF4AB /* AppDelegate.swift */,
 				2AAD05001E7BB6C7007FF4AB /* ViewController.swift */,
-				2AAD05021E7BB6C7007FF4AB /* Main.storyboard */,
-				2AAD05051E7BB6C7007FF4AB /* Assets.xcassets */,
-				2AAD05071E7BB6C7007FF4AB /* LaunchScreen.storyboard */,
+				2AF1D6931E7BBED2002F0F97 /* UI */,
 				2AAD050A1E7BB6C7007FF4AB /* Info.plist */,
 			);
 			path = "BEN Apps";
@@ -125,6 +157,55 @@
 			path = "BEN AppsUITests";
 			sourceTree = "<group>";
 		};
+		2AF1D6931E7BBED2002F0F97 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2AAD05021E7BB6C7007FF4AB /* Main.storyboard */,
+				2AAD05071E7BB6C7007FF4AB /* LaunchScreen.storyboard */,
+				2AAD05051E7BB6C7007FF4AB /* Assets.xcassets */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		2AF1D6941E7BBEFC002F0F97 /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */,
+				2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */,
+			);
+			name = LoginRegister;
+			sourceTree = "<group>";
+		};
+		2AF1D6951E7BBF1E002F0F97 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		3EDB494315D79B16F5210694 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9108D25A8DFDCF38DB1F7A2 /* Pods_BEN_Apps.framework */,
+				2C293CC49BE40C1393479D78 /* Pods_BEN_AppsTests.framework */,
+				FCFA2F938E883F55D14BBC95 /* Pods_BEN_AppsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C11A2C4738DB6D75C86B61A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABF9B48D77C2D2DAD9943556 /* Pods-BEN Apps.debug.xcconfig */,
+				59026502C775064A998583B1 /* Pods-BEN Apps.release.xcconfig */,
+				9BFAC8177FC7717790D4C49E /* Pods-BEN AppsTests.debug.xcconfig */,
+				666876B3BF5ACAAC43AF27FD /* Pods-BEN AppsTests.release.xcconfig */,
+				B550B6E31705E5B72CB1D92D /* Pods-BEN AppsUITests.debug.xcconfig */,
+				1DC252B192D04C6EA42326BC /* Pods-BEN AppsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AAD05231E7BB6C7007FF4AB /* Build configuration list for PBXNativeTarget "BEN Apps" */;
 			buildPhases = (
+				776DC0591F4B75F5B9BFF036 /* [CP] Check Pods Manifest.lock */,
 				2AAD04F71E7BB6C7007FF4AB /* Sources */,
 				2AAD04F81E7BB6C7007FF4AB /* Frameworks */,
 				2AAD04F91E7BB6C7007FF4AB /* Resources */,
+				0CAB82259720C9230E46F8EB /* [CP] Embed Pods Frameworks */,
+				B2B894112A211418B135D776 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AAD05261E7BB6C7007FF4AB /* Build configuration list for PBXNativeTarget "BEN AppsTests" */;
 			buildPhases = (
+				2FAAF75AEE1D05432834E823 /* [CP] Check Pods Manifest.lock */,
 				2AAD050B1E7BB6C7007FF4AB /* Sources */,
 				2AAD050C1E7BB6C7007FF4AB /* Frameworks */,
 				2AAD050D1E7BB6C7007FF4AB /* Resources */,
+				C37AE396EFEC651B24A4899C /* [CP] Embed Pods Frameworks */,
+				039DDE2959C7845EF0680CD7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AAD05291E7BB6C7007FF4AB /* Build configuration list for PBXNativeTarget "BEN AppsUITests" */;
 			buildPhases = (
+				0D5778485164D4444551AAF9 /* [CP] Check Pods Manifest.lock */,
 				2AAD05161E7BB6C7007FF4AB /* Sources */,
 				2AAD05171E7BB6C7007FF4AB /* Frameworks */,
 				2AAD05181E7BB6C7007FF4AB /* Resources */,
+				AF64C954E883795AECE2466F /* [CP] Embed Pods Frameworks */,
+				A573FA605FF3EFBFD9C960A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +283,7 @@
 				TargetAttributes = {
 					2AAD04FA1E7BB6C7007FF4AB = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = LM3646D5FX;
 						ProvisioningStyle = Automatic;
 					};
 					2AAD050E1E7BB6C7007FF4AB = {
@@ -254,11 +345,152 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		039DDE2959C7845EF0680CD7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEN AppsTests/Pods-BEN AppsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CAB82259720C9230E46F8EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEN Apps/Pods-BEN Apps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D5778485164D4444551AAF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2FAAF75AEE1D05432834E823 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		776DC0591F4B75F5B9BFF036 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A573FA605FF3EFBFD9C960A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEN AppsUITests/Pods-BEN AppsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF64C954E883795AECE2466F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEN AppsUITests/Pods-BEN AppsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2B894112A211418B135D776 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEN Apps/Pods-BEN Apps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C37AE396EFEC651B24A4899C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BEN AppsTests/Pods-BEN AppsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2AAD04F71E7BB6C7007FF4AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A58E1B31E7FB11800BDD422 /* LoginRegisterController.swift in Sources */,
+				2A58E1B81E7FE6C700BDD422 /* RegisterViewController.swift in Sources */,
+				2A58E1B61E7FC91700BDD422 /* TextField.swift in Sources */,
 				2AAD05011E7BB6C7007FF4AB /* ViewController.swift in Sources */,
 				2AAD04FF1E7BB6C7007FF4AB /* AppDelegate.swift in Sources */,
 			);
@@ -410,9 +642,12 @@
 		};
 		2AAD05241E7BB6C7007FF4AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF9B48D77C2D2DAD9943556 /* Pods-BEN Apps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LM3646D5FX;
 				INFOPLIST_FILE = "BEN Apps/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vesperia.BEN-Apps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,9 +657,12 @@
 		};
 		2AAD05251E7BB6C7007FF4AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59026502C775064A998583B1 /* Pods-BEN Apps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LM3646D5FX;
 				INFOPLIST_FILE = "BEN Apps/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vesperia.BEN-Apps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +672,7 @@
 		};
 		2AAD05271E7BB6C7007FF4AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BFAC8177FC7717790D4C49E /* Pods-BEN AppsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +687,7 @@
 		};
 		2AAD05281E7BB6C7007FF4AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 666876B3BF5ACAAC43AF27FD /* Pods-BEN AppsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +702,7 @@
 		};
 		2AAD052A1E7BB6C7007FF4AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B550B6E31705E5B72CB1D92D /* Pods-BEN AppsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "BEN AppsUITests/Info.plist";
@@ -475,6 +716,7 @@
 		};
 		2AAD052B1E7BB6C7007FF4AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DC252B192D04C6EA42326BC /* Pods-BEN AppsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "BEN AppsUITests/Info.plist";
@@ -505,6 +747,7 @@
 				2AAD05251E7BB6C7007FF4AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AAD05261E7BB6C7007FF4AB /* Build configuration list for PBXNativeTarget "BEN AppsTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +756,7 @@
 				2AAD05281E7BB6C7007FF4AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2AAD05291E7BB6C7007FF4AB /* Build configuration list for PBXNativeTarget "BEN AppsUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +765,7 @@
 				2AAD052B1E7BB6C7007FF4AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
