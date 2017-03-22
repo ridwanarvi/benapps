@@ -24,16 +24,23 @@ class LoginRegisterController: UIViewController,UIAlertViewDelegate {
         super.viewDidLoad()
         signupBtn.layer.borderColor = UIColor.white.cgColor
         signupBtn.layer.borderWidth = 1.0
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginRegisterController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         let tapOutTextField: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginRegisterController.showForgotPass))
         forgotPassTV.addGestureRecognizer(tapOutTextField)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     @IBAction func loginBtnClicked(_ sender: Any) {
-        let username = usernameTF.text
-        let password = passwordTF.text
-        if((username ?? "").isEmpty || (password ?? "").isEmpty ){
+        let username = usernameTF.text!
+        let password = passwordTF.text!
+        if(username.isEmpty || password.isEmpty ){
             showValidationAlert(message: "Please complete all fields", title: "Warning")
         }else{
             let params = ["username": "\(username)","password":"\(password)"]

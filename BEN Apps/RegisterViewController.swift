@@ -28,29 +28,28 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
 
     @IBAction func createAccount(_ sender: UIButton) {
     
-        var email = emailTF.text
-        let username = usernameTF.text
-        let name = nameTF.text
-        let phone = phoneTF.text
-        let company = companyTF.text
-        let department = departmentTF.text
-        let title = titleTF.text
-        let nopek = nopekTF.text
-        let password = passwordTF.text
-        let confPassword = confpasswordTF.text
-        let birthday = birthdayTF.text
-        if((email ?? "").isEmpty
-            || (username ?? "").isEmpty
-            || (name ?? "").isEmpty
-            || (phone ?? "").isEmpty
-            || (company ?? "").isEmpty
-            || (department ?? "").isEmpty
-            || (title ?? "").isEmpty
-            || (nopek ?? "").isEmpty
-            || (password ?? "").isEmpty
-            || (confPassword ?? "").isEmpty
-            || (birthday ?? "").isEmpty
-
+        let email = emailTF.text!
+        let username = usernameTF.text!
+        let name = nameTF.text!
+        let phone = phoneTF.text!
+        let company = companyTF.text!
+        let department = departmentTF.text!
+        let title = titleTF.text!
+        let nopek = nopekTF.text!
+        let password = passwordTF.text!
+        let confPassword = confpasswordTF.text!
+        let birthday = birthdayTF.text!
+        if(email.isEmpty
+            || username.isEmpty
+            || name.isEmpty
+            || phone.isEmpty
+            || company.isEmpty
+            || department.isEmpty
+            || title.isEmpty
+            || nopek.isEmpty
+            || password.isEmpty
+            || confPassword.isEmpty
+            || birthday.isEmpty
             ){
             showValidationAlert(message: "Please complete all fields", title: "Warning")
         }else if(password != confPassword){
@@ -68,8 +67,9 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
                 "nopek":"\(nopek)",
                 "gender":"\(gender)",
                 "password":"\(password)",
-                "email":"\(email!+"@pertamina.com")"
+                "email":"\(email+"@pertamina.com")"
             ]
+            print(params["phone"]!)
             
             //name, username, password, email, perusahaan, departemen, jabatan, birthday, phone, nopek, gender, gcm_id
             Alamofire.request("http://cms.pertamina.benapps.id/graph/user/register.php", method: .post, parameters:params).response { response in
