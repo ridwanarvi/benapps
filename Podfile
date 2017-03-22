@@ -7,6 +7,7 @@ target 'BEN Apps' do
 
   # Pods for BEN Apps
   pod 'Alamofire', '~> 4.4'
+  pod 'SwiftyJSON'
 
   target 'BEN AppsTests' do
     inherit! :search_paths
