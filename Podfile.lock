@@ -1,15 +1,30 @@
 PODS:
   - Alamofire (4.4.0)
+  - IQKeyboardManagerSwift (4.0.9)
+  - MBProgressHUD (1.0.0)
+  - PDFReader (2.4.0)
+  - SideMenu (2.3.1)
   - SwiftyJSON (3.1.4)
+  - XLPagerTabStrip (7.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - IQKeyboardManagerSwift
+  - MBProgressHUD (~> 1.0.0)
+  - PDFReader
+  - SideMenu
   - SwiftyJSON
+  - XLPagerTabStrip (~> 7.0)
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  IQKeyboardManagerSwift: 2eefe6c429b86aa08bfbc1b5c891164d754adf91
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  PDFReader: 0bb6be11c8876c6cea2598f0a0ab9b6640a8a018
+  SideMenu: 2a3c3da0b3d5f78a047b2271bb7398260fcd7e3d
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  XLPagerTabStrip: 9be80a66c6b7d60306b2c0a6004965016d68f813
 
-PODFILE CHECKSUM: 39cb9b2571e03eced1f4713f07067335baafd6d0
+PODFILE CHECKSUM: e90cf444efe48bc7702cc4ae0941b7d24709e489
 
 COCOAPODS: 1.2.0

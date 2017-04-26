@@ -58,8 +58,8 @@ class TextField: UITextField{
     /**
      Sets up the view.
      */
-    private func setUp() {
-        addTarget(self, action: #selector(actionKeyboardButtonTapped(sender:)), for: .editingDidEndOnExit)
+    fileprivate func setUp() {
+        addTarget(self, action: #selector(actionKeyboardButtonTapped(_:)), for: .editingDidEndOnExit)
     }
     
     /**
@@ -67,7 +67,7 @@ class TextField: UITextField{
      
      :param: sender The sender of the action parameter.
      */
-    @objc private func actionKeyboardButtonTapped(sender: UITextField) {
+    @objc fileprivate func actionKeyboardButtonTapped(_ sender: UITextField) {
         switch nextResponderField {
         case let button as UIButton where button.isEnabled:
             button.sendActions(for: .touchUpInside)

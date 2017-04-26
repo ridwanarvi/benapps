@@ -8,17 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		0A93942558AFF14E5F3730EC /* Pods_BEN_AppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFA2F938E883F55D14BBC95 /* Pods_BEN_AppsUITests.framework */; };
+		2A00BC251E938280004DFA1A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00BC241E938280004DFA1A /* Extension.swift */; };
+		2A00BC271E9392F5004DFA1A /* BenTalkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A00BC261E9392F5004DFA1A /* BenTalkCell.swift */; };
+		2A07A22D1EA4E31E00435597 /* DrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A07A22C1EA4E31E00435597 /* DrawerViewController.swift */; };
+		2A11F0C01EB07ADB0014605B /* RankBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11F0BF1EB07ADB0014605B /* RankBoardCell.swift */; };
+		2A11F0C21EB07AF30014605B /* RankBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A11F0C11EB07AF30014605B /* RankBoardViewController.swift */; };
+		2A1546081E92112700A01417 /* HomeTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1546071E92112700A01417 /* HomeTabController.swift */; };
+		2A15460B1E9217E100A01417 /* BenTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15460A1E9217E100A01417 /* BenTalkViewController.swift */; };
+		2A15460D1E9217F000A01417 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15460C1E9217F000A01417 /* NewsViewController.swift */; };
+		2A15460F1E9217FA00A01417 /* TellUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15460E1E9217FA00A01417 /* TellUsViewController.swift */; };
 		2A58E1B31E7FB11800BDD422 /* LoginRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */; };
 		2A58E1B61E7FC91700BDD422 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B51E7FC91700BDD422 /* TextField.swift */; };
 		2A58E1B81E7FE6C700BDD422 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */; };
+		2A9F3A4C1EA6079D00A817B0 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F3A4B1EA6079D00A817B0 /* QuizViewController.swift */; };
+		2A9F3A501EA6138B00A817B0 /* UpstreamScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F3A4F1EA6138B00A817B0 /* UpstreamScheduleViewController.swift */; };
+		2A9F3A521EA615B500A817B0 /* UpstreamScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F3A511EA615B500A817B0 /* UpstreamScheduleCell.swift */; };
 		2AAD04FF1E7BB6C7007FF4AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD04FE1E7BB6C7007FF4AB /* AppDelegate.swift */; };
-		2AAD05011E7BB6C7007FF4AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD05001E7BB6C7007FF4AB /* ViewController.swift */; };
 		2AAD05041E7BB6C7007FF4AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD05021E7BB6C7007FF4AB /* Main.storyboard */; };
 		2AAD05061E7BB6C7007FF4AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD05051E7BB6C7007FF4AB /* Assets.xcassets */; };
 		2AAD05091E7BB6C7007FF4AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAD05071E7BB6C7007FF4AB /* LaunchScreen.storyboard */; };
 		2AAD05141E7BB6C7007FF4AB /* BEN_AppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD05131E7BB6C7007FF4AB /* BEN_AppsTests.swift */; };
 		2AAD051F1E7BB6C7007FF4AB /* BEN_AppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD051E1E7BB6C7007FF4AB /* BEN_AppsUITests.swift */; };
 		2AB3C0F91E823924002D9B3A /* TextViewClickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3C0F81E823924002D9B3A /* TextViewClickable.swift */; };
+		2ADF67D71E923A35002855AD /* BenTalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF67D61E923A35002855AD /* BenTalkCell.xib */; };
+		2ADF67D91E923DB9002855AD /* TellUsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF67D81E923DB9002855AD /* TellUsCell.xib */; };
 		45F849729440E1DB11017398 /* Pods_BEN_AppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C293CC49BE40C1393479D78 /* Pods_BEN_AppsTests.framework */; };
 		7414660B4B3BFF45A3B455AC /* Pods_BEN_Apps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9108D25A8DFDCF38DB1F7A2 /* Pods_BEN_Apps.framework */; };
 /* End PBXBuildFile section */
@@ -42,12 +55,23 @@
 
 /* Begin PBXFileReference section */
 		1DC252B192D04C6EA42326BC /* Pods-BEN AppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN AppsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEN AppsUITests/Pods-BEN AppsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		2A00BC241E938280004DFA1A /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2A00BC261E9392F5004DFA1A /* BenTalkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenTalkCell.swift; sourceTree = "<group>"; };
+		2A07A22C1EA4E31E00435597 /* DrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerViewController.swift; sourceTree = "<group>"; };
+		2A11F0BF1EB07ADB0014605B /* RankBoardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankBoardCell.swift; sourceTree = "<group>"; };
+		2A11F0C11EB07AF30014605B /* RankBoardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankBoardViewController.swift; sourceTree = "<group>"; };
+		2A1546071E92112700A01417 /* HomeTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabController.swift; sourceTree = "<group>"; };
+		2A15460A1E9217E100A01417 /* BenTalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenTalkViewController.swift; sourceTree = "<group>"; };
+		2A15460C1E9217F000A01417 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		2A15460E1E9217FA00A01417 /* TellUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellUsViewController.swift; sourceTree = "<group>"; };
 		2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegisterController.swift; sourceTree = "<group>"; };
 		2A58E1B51E7FC91700BDD422 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2A9F3A4B1EA6079D00A817B0 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		2A9F3A4F1EA6138B00A817B0 /* UpstreamScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpstreamScheduleViewController.swift; sourceTree = "<group>"; };
+		2A9F3A511EA615B500A817B0 /* UpstreamScheduleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpstreamScheduleCell.swift; sourceTree = "<group>"; };
 		2AAD04FB1E7BB6C7007FF4AB /* BEN Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BEN Apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAD04FE1E7BB6C7007FF4AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2AAD05001E7BB6C7007FF4AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2AAD05031E7BB6C7007FF4AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AAD05051E7BB6C7007FF4AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AAD05081E7BB6C7007FF4AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +83,9 @@
 		2AAD051E1E7BB6C7007FF4AB /* BEN_AppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEN_AppsUITests.swift; sourceTree = "<group>"; };
 		2AAD05201E7BB6C7007FF4AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB3C0F81E823924002D9B3A /* TextViewClickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewClickable.swift; sourceTree = "<group>"; };
+		2ADF67D61E923A35002855AD /* BenTalkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BenTalkCell.xib; sourceTree = "<group>"; };
+		2ADF67D81E923DB9002855AD /* TellUsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TellUsCell.xib; sourceTree = "<group>"; };
+		2ADF68341E924A41002855AD /* BEN Apps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BEN Apps-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C293CC49BE40C1393479D78 /* Pods_BEN_AppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BEN_AppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59026502C775064A998583B1 /* Pods-BEN Apps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN Apps.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEN Apps/Pods-BEN Apps.release.xcconfig"; sourceTree = "<group>"; };
 		666876B3BF5ACAAC43AF27FD /* Pods-BEN AppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BEN AppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BEN AppsTests/Pods-BEN AppsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +124,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1546091E9217D000A01417 /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				2A15460A1E9217E100A01417 /* BenTalkViewController.swift */,
+				2A15460C1E9217F000A01417 /* NewsViewController.swift */,
+				2A15460E1E9217FA00A01417 /* TellUsViewController.swift */,
+				2ADF67D61E923A35002855AD /* BenTalkCell.xib */,
+				2ADF67D81E923DB9002855AD /* TellUsCell.xib */,
+				2A00BC261E9392F5004DFA1A /* BenTalkCell.swift */,
+			);
+			name = HomeTab;
+			sourceTree = "<group>";
+		};
 		2A58E1B41E7FC8FE00BDD422 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +144,18 @@
 				2AB3C0F81E823924002D9B3A /* TextViewClickable.swift */,
 			);
 			name = CustomClass;
+			sourceTree = "<group>";
+		};
+		2A9F3A4A1EA6077E00A817B0 /* Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				2A9F3A4B1EA6079D00A817B0 /* QuizViewController.swift */,
+				2A9F3A4F1EA6138B00A817B0 /* UpstreamScheduleViewController.swift */,
+				2A9F3A511EA615B500A817B0 /* UpstreamScheduleCell.swift */,
+				2A11F0BF1EB07ADB0014605B /* RankBoardCell.swift */,
+				2A11F0C11EB07AF30014605B /* RankBoardViewController.swift */,
+			);
+			name = Drawer;
 			sourceTree = "<group>";
 		};
 		2AAD04F21E7BB6C7007FF4AB = {
@@ -131,13 +183,13 @@
 		2AAD04FD1E7BB6C7007FF4AB /* BEN Apps */ = {
 			isa = PBXGroup;
 			children = (
-				2A58E1B41E7FC8FE00BDD422 /* CustomClass */,
-				2AF1D6951E7BBF1E002F0F97 /* Main */,
-				2AF1D6941E7BBEFC002F0F97 /* LoginRegister */,
 				2AAD04FE1E7BB6C7007FF4AB /* AppDelegate.swift */,
-				2AAD05001E7BB6C7007FF4AB /* ViewController.swift */,
+				2AF1D6951E7BBF1E002F0F97 /* Main */,
 				2AF1D6931E7BBED2002F0F97 /* UI */,
+				2ADF68551E924A5D002855AD /* Library */,
+				2A58E1B41E7FC8FE00BDD422 /* CustomClass */,
 				2AAD050A1E7BB6C7007FF4AB /* Info.plist */,
+				2ADF68341E924A41002855AD /* BEN Apps-Bridging-Header.h */,
 			);
 			path = "BEN Apps";
 			sourceTree = "<group>";
@@ -158,6 +210,13 @@
 				2AAD05201E7BB6C7007FF4AB /* Info.plist */,
 			);
 			path = "BEN AppsUITests";
+			sourceTree = "<group>";
+		};
+		2ADF68551E924A5D002855AD /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 		2AF1D6931E7BBED2002F0F97 /* UI */ = {
@@ -182,6 +241,12 @@
 		2AF1D6951E7BBF1E002F0F97 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				2A9F3A4A1EA6077E00A817B0 /* Drawer */,
+				2AF1D6941E7BBEFC002F0F97 /* LoginRegister */,
+				2A1546091E9217D000A01417 /* HomeTab */,
+				2A1546071E92112700A01417 /* HomeTabController.swift */,
+				2A00BC241E938280004DFA1A /* Extension.swift */,
+				2A07A22C1EA4E31E00435597 /* DrawerViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -287,6 +352,7 @@
 					2AAD04FA1E7BB6C7007FF4AB = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = LM3646D5FX;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					2AAD050E1E7BB6C7007FF4AB = {
@@ -327,7 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AAD05091E7BB6C7007FF4AB /* LaunchScreen.storyboard in Resources */,
+				2ADF67D71E923A35002855AD /* BenTalkCell.xib in Resources */,
 				2AAD05061E7BB6C7007FF4AB /* Assets.xcassets in Resources */,
+				2ADF67D91E923DB9002855AD /* TellUsCell.xib in Resources */,
 				2AAD05041E7BB6C7007FF4AB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,11 +560,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A58E1B31E7FB11800BDD422 /* LoginRegisterController.swift in Sources */,
+				2A15460F1E9217FA00A01417 /* TellUsViewController.swift in Sources */,
+				2A11F0C01EB07ADB0014605B /* RankBoardCell.swift in Sources */,
 				2A58E1B81E7FE6C700BDD422 /* RegisterViewController.swift in Sources */,
 				2AB3C0F91E823924002D9B3A /* TextViewClickable.swift in Sources */,
+				2A15460B1E9217E100A01417 /* BenTalkViewController.swift in Sources */,
+				2A07A22D1EA4E31E00435597 /* DrawerViewController.swift in Sources */,
+				2A9F3A501EA6138B00A817B0 /* UpstreamScheduleViewController.swift in Sources */,
+				2A00BC251E938280004DFA1A /* Extension.swift in Sources */,
+				2A9F3A521EA615B500A817B0 /* UpstreamScheduleCell.swift in Sources */,
 				2A58E1B61E7FC91700BDD422 /* TextField.swift in Sources */,
-				2AAD05011E7BB6C7007FF4AB /* ViewController.swift in Sources */,
+				2A9F3A4C1EA6079D00A817B0 /* QuizViewController.swift in Sources */,
 				2AAD04FF1E7BB6C7007FF4AB /* AppDelegate.swift in Sources */,
+				2A00BC271E9392F5004DFA1A /* BenTalkCell.swift in Sources */,
+				2A1546081E92112700A01417 /* HomeTabController.swift in Sources */,
+				2A15460D1E9217F000A01417 /* NewsViewController.swift in Sources */,
+				2A11F0C21EB07AF30014605B /* RankBoardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -649,12 +728,15 @@
 			baseConfigurationReference = ABF9B48D77C2D2DAD9943556 /* Pods-BEN Apps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LM3646D5FX;
 				INFOPLIST_FILE = "BEN Apps/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vesperia.BEN-Apps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BEN Apps/BEN Apps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -664,12 +746,14 @@
 			baseConfigurationReference = 59026502C775064A998583B1 /* Pods-BEN Apps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = LM3646D5FX;
 				INFOPLIST_FILE = "BEN Apps/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vesperia.BEN-Apps";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BEN Apps/BEN Apps-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

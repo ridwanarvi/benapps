@@ -7,7 +7,13 @@ target 'BEN Apps' do
 
   # Pods for BEN Apps
   pod 'Alamofire', '~> 4.4'
+  pod 'MBProgressHUD', '~> 1.0.0'
   pod 'SwiftyJSON'
+  pod 'IQKeyboardManagerSwift'
+  pod 'XLPagerTabStrip', '~> 7.0'
+  pod 'SideMenu'
+  pod 'PDFReader'
+
 
   target 'BEN AppsTests' do
     inherit! :search_paths

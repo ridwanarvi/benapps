@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MBProgressHUD
 
 class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollViewDelegate,UIPickerViewDelegate,UIPickerViewDataSource {
     @IBOutlet weak var emailTF: TextField!
@@ -25,7 +26,9 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
     @IBOutlet weak var passwordTF: TextField!
     @IBOutlet weak var confpasswordTF: TextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    var hud: MBProgressHUD = MBProgressHUD()
 
+    @IBOutlet weak var closeButton: UIButton!
     @IBAction func createAccount(_ sender: UIButton) {
     
         let email = emailTF.text!
@@ -51,9 +54,9 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
             || confPassword.isEmpty
             || birthday.isEmpty
             ){
-            showValidationAlert(message: "Please complete all fields", title: "Warning")
+            showValidationAlert("Please complete all fields", title: "Warning")
         }else if(password != confPassword){
-            showValidationAlert(message: "Your password and your confimation password is different", title: "Warning")
+            showValidationAlert("Your password and your confimation password is different", title: "Warning")
 
         }else{
             //success
@@ -70,12 +73,17 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
                 "email":"\(email+"@pertamina.com")"
             ]
             print(params["phone"]!)
-            
+            if(NetworkReachabilityManager()!.isReachable == false){
+                self.showValidationAlert("No Internet Connection", title: "Failed")
+                return
+            }
+            showProgressDialog()
             //name, username, password, email, perusahaan, departemen, jabatan, birthday, phone, nopek, gender, gcm_id
             Alamofire.request("http://cms.pertamina.benapps.id/graph/user/register.php", method: .post, parameters:params).response { response in
+                self.closeProgressDialog()
                 let json = JSON(data:response.data!)
                 if(json["status"]=="KO"){
-                    self.showValidationAlert(message: json["msg"].string!, title: "Register Failed")
+                    self.showValidationAlert(json["msg"].string!, title: "Register Failed")
                 }else{
                     let alert = UIAlertController(title: "Thanks for registering on Ben Apps", message: "Success", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (alerta) in
@@ -89,6 +97,11 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
             
             
         }
+    }
+    
+    @IBAction func closeClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+        
     }
     
     var pickOption = ["Male", "Female"]
@@ -115,16 +128,15 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
         view.endEditing(true)
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {    //delegate method
-        let point = textField.frame.origin
-        scrollView.setContentOffset(CGPoint(x:0.0, y:point.y-48.0), animated: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        closeButton.layer.borderColor = UIColor.white.cgColor
+        closeButton.layer.borderWidth = 1.0
+        
         
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.date
@@ -136,7 +148,7 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
         genderTF.inputView = genderPickerView
     }
     
-    func handleDatePicker(sender: UIDatePicker) {
+    func handleDatePicker(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -146,18 +158,6 @@ class RegisterViewController: UIViewController,UITextFieldDelegate, UIScrollView
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
-    }
- 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    func showValidationAlert(message: String, title: String) {
-        let alert = UIAlertController(title: "\(title)", message: "\(message)", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
     }
     
 }

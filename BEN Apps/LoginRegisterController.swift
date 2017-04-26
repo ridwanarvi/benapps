@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MBProgressHUD
 
 
 class LoginRegisterController: UIViewController,UIAlertViewDelegate {
@@ -19,11 +20,25 @@ class LoginRegisterController: UIViewController,UIAlertViewDelegate {
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signupBtn: UIButton!
     @IBOutlet weak var forgotPassTV: TextViewClickable!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         signupBtn.layer.borderColor = UIColor.white.cgColor
         signupBtn.layer.borderWidth = 1.0
+        
+        let preferences = UserDefaults.standard
+        
+        if preferences.object(forKey:"auth_token") == nil {
+            
+            
+        } else {
+            print(preferences.string(forKey:"auth_token")!)
+            DispatchQueue.main.async() {
+                [unowned self] in
+                self.performSegue(withIdentifier: "goToHome", sender: self)
+            }
+        }
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginRegisterController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -31,6 +46,7 @@ class LoginRegisterController: UIViewController,UIAlertViewDelegate {
         forgotPassTV.addGestureRecognizer(tapOutTextField)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
@@ -41,17 +57,64 @@ class LoginRegisterController: UIViewController,UIAlertViewDelegate {
         let username = usernameTF.text!
         let password = passwordTF.text!
         if(username.isEmpty || password.isEmpty ){
-            showValidationAlert(message: "Please complete all fields", title: "Warning")
+            showValidationAlert("Please complete all fields", title: "Warning")
         }else{
+            if(NetworkReachabilityManager()!.isReachable == false){
+                self.showValidationAlert("No Internet Connection", title: "Failed")
+                return
+            }
+            showProgressDialog()
+            
             let params = ["username": "\(username)","password":"\(password)"]
             Alamofire.request("http://cms.pertamina.benapps.id/graph/user/login.php", method: .post, parameters:params).response { response in
+                self.closeProgressDialog()
                 let json = JSON(data:response.data!)
-                self.showValidationAlert(message: json["msg"].string!, title: "Login")
+                if(json["status"].string! == "OK"){
+                    
+                    if let bundle = Bundle.main.bundleIdentifier {
+                        UserDefaults.standard.removePersistentDomain(forName: bundle)
+                    }
+                    let preferences = UserDefaults.standard
+                    preferences.set(json["data"]["auth_token"].string!, forKey: "auth_token")
+                    preferences.set(json["data"]["user_id"].string!, forKey: "user_id")
+                    preferences.set(json["data"]["username"].string!, forKey: "username")
+                    preferences.set(json["data"]["userimage"].string!, forKey: "userimage")
+                    preferences.set(json["data"]["usercover"].string!, forKey: "usercover")
+                    preferences.set(json["data"]["name"].string!, forKey: "name")
+                    preferences.set(json["data"]["email"].string!, forKey: "email")
+                    preferences.set(json["data"]["birthday"].string!, forKey: "birthday")
+                    preferences.set(json["data"]["jabatan"].string!, forKey: "jabatan")
+                    preferences.set(json["data"]["departemen"].string!, forKey: "departemen")
+                    preferences.set(json["data"]["phone"].string!, forKey: "phone")
+                    preferences.set(json["data"]["nopek"].string!, forKey: "nopek")
+                    preferences.set(json["data"]["gender_type"].string!, forKey: "gender_type")
+                    preferences.set(json["data"]["gender_name"].string!, forKey: "gender_name")
+                    preferences.set(json["data"]["quote"].string!, forKey: "quote")
+                    preferences.set(json["data"]["badge_id"].string!, forKey: "badge_id")
+                    preferences.set(json["data"]["total_point"].string!, forKey: "total_point")
+                    preferences.set(json["data"]["total_quiz"].string!, forKey: "total_quiz")
+                    preferences.set(json["data"]["total_post"].string!, forKey: "total_post")
+                    preferences.set(json["data"]["total_comment"].int!, forKey: "total_comment")
+                    preferences.synchronize()
+
+
+                    
+                    self.showValidationAlert(json["msg"].string!, title: "Login")
+                    DispatchQueue.main.async() {
+                        [unowned self] in
+                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                    }
+
+
+                }else{
+                    self.showValidationAlert(json["msg"].string!, title: "Login Failed")
+                }
             }
         }
         
     }
-   
+    
+
     func showForgotPass(){
         let alert = UIAlertView()
         alert.delegate=self
@@ -68,27 +131,18 @@ class LoginRegisterController: UIViewController,UIAlertViewDelegate {
         if buttonIndex==0 {
             let textField:UITextField = alertView.textField(at: 0)!
             print(textField.text!)
+            if(NetworkReachabilityManager()!.isReachable == false){
+                self.showValidationAlert("No Internet Connection", title: "Failed")
+                return
+            }
+            showProgressDialog()
             let params = ["email": "\(textField.text!)"]
             Alamofire.request("http://cms.pertamina.benapps.id/graph/user/forgot-password.php", method: .post, parameters:params).response { response in
                 let json = JSON(data:response.data!)
-                
-                self.showValidationAlert(message: json["msg"].string!, title: "Forgot Password")
+                self.closeProgressDialog()
+                self.showValidationAlert(json["msg"].string!, title: "Forgot Password")
             }
         }
     }
-    
-    func showValidationAlert(message: String, title: String) {
-        let alert = UIAlertController(title: "\(title)", message: "\(message)", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     
 }
