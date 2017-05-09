@@ -258,3 +258,4 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
     }
     
 }
+
