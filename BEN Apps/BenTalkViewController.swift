@@ -28,6 +28,8 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
         refreshControl?.addTarget(self, action: #selector(BenTalkViewController.refresh), for: UIControlEvents.valueChanged)
         tableView.register(UINib(nibName: "BenTalkCell", bundle: nil), forCellReuseIdentifier: "BenTalkCell")
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        tableView.estimatedRowHeight = 44.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         loadData()
     }
@@ -93,7 +95,7 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
         
         // Change 10.0 to adjust the distance from bottom
         if maximumOffset - currentOffset <= 10.0 {
-            if(!reachedEndOfItems) {
+            if(!(self.refreshControl?.isRefreshing)! && !reachedEndOfItems) {
                 self.loadData()
             }
         }
@@ -107,7 +109,7 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(jsonArr.count==0){
-            var messageLabel:UILabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            let messageLabel:UILabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
             messageLabel.text = "No data"
             messageLabel.textColor = UIColor.black
             messageLabel.numberOfLines = 0
@@ -127,13 +129,8 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if(jsonArr[indexPath.row]["socinfo_images"].string! != "" ){
-            return CGFloat(integerLiteral: 331)
-
-        }else{
-            return CGFloat(integerLiteral: 140)
-
-        }
+        return UITableViewAutomaticDimension
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -194,11 +191,12 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
         cell.nameTV.text = jsonArr[indexPath.row]["name"].string!
         cell.nameTV.sizeToFit()
 
-        //cell.commentBtn.titleLabel?.text =
+        cell.commentBtn.titleLabel?.text = jsonArr[indexPath.row]["num_comment"].string! + " Comments"
         cell.descriptionTV.text = jsonArr[indexPath.row]["socinfo_description"].string!
         
         
         
+        cell.descriptionHeight.constant = 30
         let size = cell.descriptionTV.sizeThatFits(CGSize(width: cell.descriptionTV.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
         if size.height != cell.descriptionHeight.constant && size.height > cell.descriptionTV.frame.size.height{
             cell.descriptionHeight.constant = size.height
@@ -208,54 +206,6 @@ class BenTalkViewController: UITableViewController, IndicatorInfoProvider {
         return cell
     }
     
-    func timeAgoSinceDate(date:Date, numericDates:Bool) -> String {
-        let calendar = NSCalendar.current
-        let unitFlags: NSCalendar.Unit = [.second, .minute, .hour, .day, .weekOfYear, .month, .year]
-        let now = NSDate()
-        let components = (calendar as NSCalendar).components(unitFlags, from: date, to: now as Date, options: [])
         
-        if (components.year! >= 1){
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMM d, yyyy"
-            return dateFormatter.string(from: date)
-        } else if (components.month! >= 1){
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMM d, yyyy"
-            return dateFormatter.string(from: date)
-        } else if (components.weekOfYear! >= 1){
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MMM d, yyyy"
-            return dateFormatter.string(from: date)
-        } else if (components.day! >= 2) {
-            return "\(components.day!)" + " days ago"
-        } else if (components.day! >= 1){
-            if (numericDates){
-                return "1 day ago"
-            } else {
-                return "Yesterday"
-            }
-        } else if (components.hour! >= 2) {
-            return "\(components.hour!)" + " hours ago"
-        } else if (components.hour! >= 1){
-            if (numericDates){
-                return "1 hour ago"
-            } else {
-                return "An hour ago"
-            }
-        } else if (components.minute! >= 2) {
-            return "\(components.minute!)" + " minutes ago"
-        } else if (components.minute! >= 1){
-            if (numericDates){
-                return "1 minute ago"
-            } else {
-                return "A minute ago"
-            }
-        } else if (components.second! >= 3) {
-            return "\(components.second!)" + " seconds ago"
-        } else {
-            return "Just now"
-        }
-    }
-    
 }
 

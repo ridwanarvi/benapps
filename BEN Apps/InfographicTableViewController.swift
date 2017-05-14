@@ -1,26 +1,32 @@
 //
-//  RankBoardViewController.swift
+//  InfographicTableViewController.swift
 //  BEN Apps
 //
-//  Created by Vesperia on 4/26/17.
+//  Created by Vesperia on 5/9/17.
 //  Copyright © 2017 Vesperia. All rights reserved.
 //
+
+
 
 import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
 import MBProgressHUD
+import XLPagerTabStrip
+import BFRImageViewer
 
-class RankBoardViewController: UITableViewController {
+class InfographicTableViewController: UITableViewController {
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         refreshControl = UIRefreshControl()
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl?.addTarget(self, action: #selector(RankBoardViewController.refresh), for: UIControlEvents.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(InfographicTableViewController.refresh), for: UIControlEvents.valueChanged)
+        tableView.estimatedRowHeight = 75.0
+        tableView.rowHeight = UITableViewAutomaticDimension
         initNavigationBar()
         loadData()
     }
@@ -60,7 +66,7 @@ class RankBoardViewController: UITableViewController {
         let preferences = UserDefaults.standard
         let auth_token = preferences.string(forKey: "auth_token")!
         let params = ["auth_token": "\(auth_token)","rpp":"\(rpp)","page":"\(page)"]
-        Alamofire.request("http://cms.pertamina.benapps.id/graph/content/rankboard.php", method: .post, parameters:params).response { response in
+        Alamofire.request("http://cms.pertamina.benapps.id/graph/content/info-graphic.php", method: .post, parameters:params).response { response in
             self.closeProgressDialog()
             let json = JSON(data:response.data!)
             if(json["status"].string! == "OK"){
@@ -92,12 +98,6 @@ class RankBoardViewController: UITableViewController {
         }
     }
     
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(jsonArr.count==0){
             let messageLabel:UILabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
@@ -119,40 +119,44 @@ class RankBoardViewController: UITableViewController {
         
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presentBFR(urlString: jsonArr[indexPath.row]["image"].string!)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let identifier = "RankBoardCell"
-        var cell: RankBoardCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? RankBoardCell
+        let identifier = "InfographicCell"
+        var cell: InfographicTableViewCell! = tableView.dequeueReusableCell(withIdentifier: identifier) as? InfographicTableViewCell
         if cell == nil {
-            cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? RankBoardCell
-        }
-        cell.nameTV.text = jsonArr[indexPath.row]["namalengkap"].string!
-        cell.pointTV.text = jsonArr[indexPath.row]["total_point"].string! + " Point"
-        cell.rankTV.text = jsonArr[indexPath.row]["rank"].string!
-        
-        if(jsonArr[indexPath.row]["userimage"].string! != "" )
-        {
-            cell.profpicIV.imageFromUrl(urlString: jsonArr[indexPath.row]["userimage"].string!)
-            
-        }else {
-            cell.profpicIV.image = #imageLiteral(resourceName: "ic_default_pp")
+            tableView.register(UINib(nibName: "InfographicCell", bundle: nil), forCellReuseIdentifier: "InfographicCell")
+            cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? InfographicTableViewCell
         }
         
         
-        cell.profpicIV.layer.cornerRadius = 25.0
-        cell.profpicIV.layer.masksToBounds = true
+        cell.imgView.imageFromUrl(urlString: jsonArr[indexPath.row]["image"].string!)
         
-        if(jsonArr[indexPath.row]["badge_id"].string! == "" ){
-            cell.badgeIV.image = #imageLiteral(resourceName: "ic_newbie")
-        }else if(jsonArr[indexPath.row]["badge_id"].string! == "0"){
-            cell.badgeIV.image = #imageLiteral(resourceName: "ic_newbie")
-        }else if(jsonArr[indexPath.row]["badge_id"].string! == "1"){
-            cell.badgeIV.image = #imageLiteral(resourceName: "ic_raiser")
-        }else if(jsonArr[indexPath.row]["badge_id"].string! == "2"){
-            cell.badgeIV.image = #imageLiteral(resourceName: "ic_energizer")
-        }else if(jsonArr[indexPath.row]["badge_id"].string! == "3"){
-            cell.badgeIV.image = #imageLiteral(resourceName: "ic_patriot")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd kk:mm:ss"
+        let date = dateFormatter.date(from: jsonArr[indexPath.row]["date_created"].string!)
+        
+        cell.dateTV.text = timeAgoSinceDate(date:date!, numericDates: false)
+        
+        cell.dateTV.sizeToFit()
+        
+        cell.titleTV.text = jsonArr[indexPath.row]["title"].string!
+        cell.titleHeight.constant = 30
+        let size = cell.titleTV.sizeThatFits(CGSize(width: cell.titleTV.frame.size.width, height: CGFloat.greatestFiniteMagnitude))
+        if size.height != cell.titleHeight.constant && size.height > cell.titleTV.frame.size.height{
+            cell.titleHeight.constant = size.height
         }
+        
         return cell
     }
+    
+    
 }
+

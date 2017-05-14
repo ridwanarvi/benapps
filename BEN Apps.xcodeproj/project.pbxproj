@@ -17,6 +17,18 @@
 		2A15460B1E9217E100A01417 /* BenTalkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15460A1E9217E100A01417 /* BenTalkViewController.swift */; };
 		2A15460D1E9217F000A01417 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15460C1E9217F000A01417 /* NewsViewController.swift */; };
 		2A15460F1E9217FA00A01417 /* TellUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A15460E1E9217FA00A01417 /* TellUsViewController.swift */; };
+		2A1720DF1EC202A000593FAE /* TellUsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1720DE1EC202A000593FAE /* TellUsCell.swift */; };
+		2A1720E31EC218E800593FAE /* InfographicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1720E21EC218E800593FAE /* InfographicTableViewCell.swift */; };
+		2A1720E51EC219F500593FAE /* InfographicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1720E41EC219F500593FAE /* InfographicTableViewController.swift */; };
+		2A1720E71EC2209100593FAE /* NavigationBarCustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1720E61EC2209100593FAE /* NavigationBarCustomView.xib */; };
+		2A1B4DBD1EC7E98E003CB615 /* GiftsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B4DBC1EC7E98E003CB615 /* GiftsTableViewController.swift */; };
+		2A1B4DBF1EC7E9FC003CB615 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B4DBE1EC7E9FC003CB615 /* GiftCell.swift */; };
+		2A1B4DC11EC7F16B003CB615 /* DoorprizeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B4DC01EC7F16B003CB615 /* DoorprizeCell.swift */; };
+		2A1B4DC31EC7FC22003CB615 /* DoorprizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B4DC21EC7FC22003CB615 /* DoorprizeViewController.swift */; };
+		2A1B4DC51EC8009E003CB615 /* RedeemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B4DC41EC8009E003CB615 /* RedeemViewController.swift */; };
+		2A1B4DC71EC82AB3003CB615 /* NewsHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A1B4DC61EC82AB3003CB615 /* NewsHeaderCell.xib */; };
+		2A2C22FD1EC82C7F004DD996 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A2C22FC1EC82C7F004DD996 /* NewsCell.xib */; };
+		2A2C22FF1EC82DF4004DD996 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2C22FE1EC82DF4004DD996 /* NewsCell.swift */; };
 		2A58E1B31E7FB11800BDD422 /* LoginRegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */; };
 		2A58E1B61E7FC91700BDD422 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B51E7FC91700BDD422 /* TextField.swift */; };
 		2A58E1B81E7FE6C700BDD422 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */; };
@@ -31,6 +43,7 @@
 		2AAD05141E7BB6C7007FF4AB /* BEN_AppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD05131E7BB6C7007FF4AB /* BEN_AppsTests.swift */; };
 		2AAD051F1E7BB6C7007FF4AB /* BEN_AppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAD051E1E7BB6C7007FF4AB /* BEN_AppsUITests.swift */; };
 		2AB3C0F91E823924002D9B3A /* TextViewClickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB3C0F81E823924002D9B3A /* TextViewClickable.swift */; };
+		2ABD6E3F1EC25BBA00F10743 /* HowToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABD6E3E1EC25BBA00F10743 /* HowToViewController.swift */; };
 		2ADF67D71E923A35002855AD /* BenTalkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF67D61E923A35002855AD /* BenTalkCell.xib */; };
 		2ADF67D91E923DB9002855AD /* TellUsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ADF67D81E923DB9002855AD /* TellUsCell.xib */; };
 		45F849729440E1DB11017398 /* Pods_BEN_AppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C293CC49BE40C1393479D78 /* Pods_BEN_AppsTests.framework */; };
@@ -65,6 +78,18 @@
 		2A15460A1E9217E100A01417 /* BenTalkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BenTalkViewController.swift; sourceTree = "<group>"; };
 		2A15460C1E9217F000A01417 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		2A15460E1E9217FA00A01417 /* TellUsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellUsViewController.swift; sourceTree = "<group>"; };
+		2A1720DE1EC202A000593FAE /* TellUsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TellUsCell.swift; sourceTree = "<group>"; };
+		2A1720E21EC218E800593FAE /* InfographicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfographicTableViewCell.swift; sourceTree = "<group>"; };
+		2A1720E41EC219F500593FAE /* InfographicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfographicTableViewController.swift; sourceTree = "<group>"; };
+		2A1720E61EC2209100593FAE /* NavigationBarCustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationBarCustomView.xib; sourceTree = "<group>"; };
+		2A1B4DBC1EC7E98E003CB615 /* GiftsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftsTableViewController.swift; sourceTree = "<group>"; };
+		2A1B4DBE1EC7E9FC003CB615 /* GiftCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftCell.swift; sourceTree = "<group>"; };
+		2A1B4DC01EC7F16B003CB615 /* DoorprizeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorprizeCell.swift; sourceTree = "<group>"; };
+		2A1B4DC21EC7FC22003CB615 /* DoorprizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoorprizeViewController.swift; sourceTree = "<group>"; };
+		2A1B4DC41EC8009E003CB615 /* RedeemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemViewController.swift; sourceTree = "<group>"; };
+		2A1B4DC61EC82AB3003CB615 /* NewsHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsHeaderCell.xib; sourceTree = "<group>"; };
+		2A2C22FC1EC82C7F004DD996 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		2A2C22FE1EC82DF4004DD996 /* NewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		2A58E1B21E7FB11800BDD422 /* LoginRegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegisterController.swift; sourceTree = "<group>"; };
 		2A58E1B51E7FC91700BDD422 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		2A58E1B71E7FE6C700BDD422 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +110,7 @@
 		2AAD051E1E7BB6C7007FF4AB /* BEN_AppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEN_AppsUITests.swift; sourceTree = "<group>"; };
 		2AAD05201E7BB6C7007FF4AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB3C0F81E823924002D9B3A /* TextViewClickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewClickable.swift; sourceTree = "<group>"; };
+		2ABD6E3E1EC25BBA00F10743 /* HowToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToViewController.swift; sourceTree = "<group>"; };
 		2ADF67D61E923A35002855AD /* BenTalkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BenTalkCell.xib; sourceTree = "<group>"; };
 		2ADF67D81E923DB9002855AD /* TellUsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TellUsCell.xib; sourceTree = "<group>"; };
 		2ADF68341E924A41002855AD /* BEN Apps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BEN Apps-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -130,13 +156,39 @@
 			isa = PBXGroup;
 			children = (
 				2A15460A1E9217E100A01417 /* BenTalkViewController.swift */,
+				2A1B4DC61EC82AB3003CB615 /* NewsHeaderCell.xib */,
+				2A2C22FC1EC82C7F004DD996 /* NewsCell.xib */,
 				2A15460C1E9217F000A01417 /* NewsViewController.swift */,
 				2A15460E1E9217FA00A01417 /* TellUsViewController.swift */,
 				2ADF67D61E923A35002855AD /* BenTalkCell.xib */,
 				2ADF67D81E923DB9002855AD /* TellUsCell.xib */,
 				2A00BC261E9392F5004DFA1A /* BenTalkCell.swift */,
+				2A1720DE1EC202A000593FAE /* TellUsCell.swift */,
+				2A2C22FE1EC82DF4004DD996 /* NewsCell.swift */,
 			);
 			name = HomeTab;
+			sourceTree = "<group>";
+		};
+		2A1720E81EC2264A00593FAE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A11F0BF1EB07ADB0014605B /* RankBoardCell.swift */,
+				2A9F3A511EA615B500A817B0 /* UpstreamScheduleCell.swift */,
+				2A1720E21EC218E800593FAE /* InfographicTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		2A1B4DBB1EC7E978003CB615 /* Redeem */ = {
+			isa = PBXGroup;
+			children = (
+				2A1B4DBC1EC7E98E003CB615 /* GiftsTableViewController.swift */,
+				2A1B4DC21EC7FC22003CB615 /* DoorprizeViewController.swift */,
+				2A1B4DBE1EC7E9FC003CB615 /* GiftCell.swift */,
+				2A1B4DC01EC7F16B003CB615 /* DoorprizeCell.swift */,
+				2A1B4DC41EC8009E003CB615 /* RedeemViewController.swift */,
+			);
+			name = Redeem;
 			sourceTree = "<group>";
 		};
 		2A58E1B41E7FC8FE00BDD422 /* CustomClass */ = {
@@ -151,12 +203,15 @@
 		2A9F3A4A1EA6077E00A817B0 /* Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				2A1B4DBB1EC7E978003CB615 /* Redeem */,
+				2A1720E81EC2264A00593FAE /* Cells */,
 				2A9F3A4B1EA6079D00A817B0 /* QuizViewController.swift */,
 				2A9F3A4F1EA6138B00A817B0 /* UpstreamScheduleViewController.swift */,
 				2A81F2FF1EC045B000E488AF /* HotTopicFrontTableViewController.swift */,
-				2A9F3A511EA615B500A817B0 /* UpstreamScheduleCell.swift */,
-				2A11F0BF1EB07ADB0014605B /* RankBoardCell.swift */,
 				2A11F0C11EB07AF30014605B /* RankBoardViewController.swift */,
+				2A1720E41EC219F500593FAE /* InfographicTableViewController.swift */,
+				2ABD6E3E1EC25BBA00F10743 /* HowToViewController.swift */,
+				2A1720E61EC2209100593FAE /* NavigationBarCustomView.xib */,
 			);
 			name = Drawer;
 			sourceTree = "<group>";
@@ -395,9 +450,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A1B4DC71EC82AB3003CB615 /* NewsHeaderCell.xib in Resources */,
 				2AAD05091E7BB6C7007FF4AB /* LaunchScreen.storyboard in Resources */,
+				2A2C22FD1EC82C7F004DD996 /* NewsCell.xib in Resources */,
 				2ADF67D71E923A35002855AD /* BenTalkCell.xib in Resources */,
 				2AAD05061E7BB6C7007FF4AB /* Assets.xcassets in Resources */,
+				2A1720E71EC2209100593FAE /* NavigationBarCustomView.xib in Resources */,
 				2ADF67D91E923DB9002855AD /* TellUsCell.xib in Resources */,
 				2AAD05041E7BB6C7007FF4AB /* Main.storyboard in Resources */,
 			);
@@ -566,16 +624,26 @@
 				2A15460F1E9217FA00A01417 /* TellUsViewController.swift in Sources */,
 				2A11F0C01EB07ADB0014605B /* RankBoardCell.swift in Sources */,
 				2A58E1B81E7FE6C700BDD422 /* RegisterViewController.swift in Sources */,
+				2A1B4DC51EC8009E003CB615 /* RedeemViewController.swift in Sources */,
 				2AB3C0F91E823924002D9B3A /* TextViewClickable.swift in Sources */,
+				2A1720DF1EC202A000593FAE /* TellUsCell.swift in Sources */,
 				2A15460B1E9217E100A01417 /* BenTalkViewController.swift in Sources */,
 				2A07A22D1EA4E31E00435597 /* DrawerViewController.swift in Sources */,
 				2A81F3001EC045B000E488AF /* HotTopicFrontTableViewController.swift in Sources */,
+				2A2C22FF1EC82DF4004DD996 /* NewsCell.swift in Sources */,
+				2A1B4DBD1EC7E98E003CB615 /* GiftsTableViewController.swift in Sources */,
+				2A1720E51EC219F500593FAE /* InfographicTableViewController.swift in Sources */,
+				2A1B4DC31EC7FC22003CB615 /* DoorprizeViewController.swift in Sources */,
 				2A9F3A501EA6138B00A817B0 /* UpstreamScheduleViewController.swift in Sources */,
 				2A00BC251E938280004DFA1A /* Extension.swift in Sources */,
+				2A1B4DC11EC7F16B003CB615 /* DoorprizeCell.swift in Sources */,
+				2A1720E31EC218E800593FAE /* InfographicTableViewCell.swift in Sources */,
 				2A9F3A521EA615B500A817B0 /* UpstreamScheduleCell.swift in Sources */,
+				2ABD6E3F1EC25BBA00F10743 /* HowToViewController.swift in Sources */,
 				2A58E1B61E7FC91700BDD422 /* TextField.swift in Sources */,
 				2A9F3A4C1EA6079D00A817B0 /* QuizViewController.swift in Sources */,
 				2AAD04FF1E7BB6C7007FF4AB /* AppDelegate.swift in Sources */,
+				2A1B4DBF1EC7E9FC003CB615 /* GiftCell.swift in Sources */,
 				2A00BC271E9392F5004DFA1A /* BenTalkCell.swift in Sources */,
 				2A1546081E92112700A01417 /* HomeTabController.swift in Sources */,
 				2A15460D1E9217F000A01417 /* NewsViewController.swift in Sources */,

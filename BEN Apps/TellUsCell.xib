@@ -11,31 +11,77 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TellUsCell" customModule="BEN_Apps" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="379" height="98"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cv6-ir-wSr">
-                    <rect key="frame" x="16" y="29" width="120" height="80"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="test" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LNg-Ng-NlD">
-                    <rect key="frame" x="144" y="53" width="193" height="56"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="HR" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGr-Q3-QXd">
+                    <rect key="frame" x="102" y="3" width="249" height="27"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="27" id="ABN-Ot-YUF"/>
+                    </constraints>
+                    <color key="textColor" red="0.7803921568627451" green="0.17254901960784313" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="cBenTalkCell" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SGr-Q3-QXd">
-                    <rect key="frame" x="144" y="29" width="193" height="27"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="test" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNg-Ng-NlD">
+                    <rect key="frame" x="102" y="31" width="249" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Tvc-YU-C6a"/>
+                    </constraints>
+                    <color key="textColor" red="0.34509803921568627" green="0.34509803921568627" blue="0.3529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cv6-ir-wSr">
+                    <rect key="frame" x="4" y="3" width="90" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="90" id="8dj-8L-vAa"/>
+                        <constraint firstAttribute="height" constant="60" id="Sky-0p-JOz"/>
+                    </constraints>
+                </imageView>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Mar 17, 2016" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7l-JC-3BB">
+                    <rect key="frame" x="102" y="69" width="249" height="23"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="33.5" y="54.5"/>
+            <constraints>
+                <constraint firstItem="P7l-JC-3BB" firstAttribute="top" secondItem="LNg-Ng-NlD" secondAttribute="bottom" constant="8" id="392-nb-Lql"/>
+                <constraint firstAttribute="bottom" secondItem="P7l-JC-3BB" secondAttribute="bottom" constant="6" id="A97-Uv-41L"/>
+                <constraint firstItem="LNg-Ng-NlD" firstAttribute="leading" secondItem="P7l-JC-3BB" secondAttribute="leading" id="AFB-E9-1ij"/>
+                <constraint firstItem="cv6-ir-wSr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="3" id="B2v-Of-jc8"/>
+                <constraint firstItem="LNg-Ng-NlD" firstAttribute="top" secondItem="SGr-Q3-QXd" secondAttribute="bottom" constant="1" id="B6e-F1-QFu"/>
+                <constraint firstItem="SGr-Q3-QXd" firstAttribute="leading" secondItem="LNg-Ng-NlD" secondAttribute="leading" id="Qvt-qm-Wmk"/>
+                <constraint firstItem="LNg-Ng-NlD" firstAttribute="trailing" secondItem="P7l-JC-3BB" secondAttribute="trailing" id="TnB-8a-N7a"/>
+                <constraint firstAttribute="trailing" secondItem="SGr-Q3-QXd" secondAttribute="trailing" constant="28" id="bbJ-nS-NmB"/>
+                <constraint firstItem="SGr-Q3-QXd" firstAttribute="leading" secondItem="cv6-ir-wSr" secondAttribute="trailing" constant="8" symbolic="YES" id="jRB-R7-zaq"/>
+                <constraint firstItem="cv6-ir-wSr" firstAttribute="top" secondItem="SGr-Q3-QXd" secondAttribute="top" id="nrq-O8-elD"/>
+                <constraint firstItem="cv6-ir-wSr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="uPA-CP-8uO"/>
+                <constraint firstItem="SGr-Q3-QXd" firstAttribute="trailing" secondItem="LNg-Ng-NlD" secondAttribute="trailing" id="yPH-Ji-cNC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="dateTv" destination="P7l-JC-3BB" id="dEO-Sv-P0G"/>
+                <outlet property="departmentTV" destination="SGr-Q3-QXd" id="I3T-1m-UAs"/>
+                <outlet property="descriptionHeight" destination="Tvc-YU-C6a" id="iWW-Fh-jge"/>
+                <outlet property="descriptionTV" destination="LNg-Ng-NlD" id="XB3-ve-AIa"/>
+                <outlet property="imgview" destination="cv6-ir-wSr" id="FuH-fZ-wMh"/>
+            </connections>
+            <point key="canvasLocation" x="30.5" y="-230"/>
         </view>
     </objects>
 </document>

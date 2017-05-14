@@ -13,8 +13,7 @@ target 'BEN Apps' do
   pod 'XLPagerTabStrip', '~> 7.0'
   pod 'SideMenu'
   pod 'PDFReader'
-  pod 'OAStackView'
-
+  pod 'BFRImageViewer'
 
 
   target 'BEN AppsTests' do

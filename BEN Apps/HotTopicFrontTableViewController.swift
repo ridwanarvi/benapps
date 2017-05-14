@@ -11,6 +11,11 @@ import UIKit
 
 class HotTopicFrontTableViewController: UITableViewController {
 
+    override func viewDidLoad() {
+        initNavigationBar()
+
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let height =   UIApplication.shared.statusBarFrame.height +
             self.navigationController!.navigationBar.frame.height

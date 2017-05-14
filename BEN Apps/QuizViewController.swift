@@ -12,6 +12,7 @@ import Alamofire
 import SwiftyJSON
 import MBProgressHUD
 import XLPagerTabStrip
+import SideMenu
 
 class QuizViewController: UITableViewController {
 
@@ -20,12 +21,17 @@ class QuizViewController: UITableViewController {
         
         refreshControl = UIRefreshControl()
         refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl?.addTarget(self, action: #selector(NewsViewController.refresh), for: UIControlEvents.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(QuizViewController.refresh), for: UIControlEvents.valueChanged)
         tableView.register(UINib(nibName: "BenTalkCell", bundle: nil), forCellReuseIdentifier: "BenTalkCell")
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
+        initNavigationBar()
         loadData()
     }
+    
+    
+    
+
     
     func refresh(sender:AnyObject) {
         // Code to refresh table view
@@ -74,7 +80,7 @@ class QuizViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(jsonArr.count==0){
-            var messageLabel:UILabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+            let messageLabel:UILabel = UILabel.init(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.height))
             messageLabel.text = "No data"
             messageLabel.textColor = UIColor.black
             messageLabel.numberOfLines = 0

@@ -29,8 +29,16 @@ class LoginRegisterController: UIViewController,UIAlertViewDelegate {
         let preferences = UserDefaults.standard
         
         if preferences.object(forKey:"auth_token") == nil {
-            
-            
+            let vc = storyboard?.instantiateViewController(withIdentifier:  "HowToViewController")
+
+            let navController = UINavigationController(rootViewController: vc as! HowToViewController)
+            navController.navigationBar.barTintColor = UIColor(red: 218/255.0, green: 37/255.0, blue: 28/255.0, alpha: 1.00)
+            navController.navigationBar.barStyle = UIBarStyle.black
+            DispatchQueue.main.async() {
+                [unowned self] in
+                self.present(navController, animated: true, completion: nil)
+            }
+           
         } else {
             print(preferences.string(forKey:"auth_token")!)
             DispatchQueue.main.async() {
